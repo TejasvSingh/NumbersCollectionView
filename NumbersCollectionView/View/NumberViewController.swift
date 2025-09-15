@@ -23,6 +23,7 @@ class NumberViewController: UIViewController, UICollectionViewDataSource, UIColl
         view.addSubview(collectionView)
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         numbers.count
     }
@@ -35,6 +36,7 @@ class NumberViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 72, height: 72)
+        let size = (collectionView.frame.width / 5) - 8
+        return CGSize(width: size, height: size)
     }
 }
